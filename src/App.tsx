@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  }, [users]);
 
   const getUsers = async () => {
     const { data } = await supabase.from("users").select("*");
